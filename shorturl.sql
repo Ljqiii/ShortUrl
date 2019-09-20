@@ -51,7 +51,7 @@ CREATE TABLE `shorturl` (
   `originurl` varchar(500) DEFAULT NULL,
   `expiretime` datetime DEFAULT NULL,
   UNIQUE KEY `id` (`id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 ;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -74,7 +74,7 @@ DROP TABLE IF EXISTS `status`;
 CREATE TABLE `status` (
   `k` varchar(10) DEFAULT NULL,
   `v` varchar(10) DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 ;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
