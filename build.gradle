@@ -25,16 +25,18 @@ ext {
 
 dependencies {
     implementation 'org.springframework.boot:spring-boot-starter-actuator'
-    implementation 'org.springframework.boot:spring-boot-starter-data-redis'
     implementation 'org.springframework.boot:spring-boot-starter-security'
     implementation 'org.springframework.boot:spring-boot-starter-thymeleaf'
     implementation 'org.springframework.boot:spring-boot-starter-web'
     implementation 'de.codecentric:spring-boot-admin-starter-client'
     implementation 'org.mybatis.spring.boot:mybatis-spring-boot-starter:2.1.0'
     developmentOnly 'org.springframework.boot:spring-boot-devtools'
-    runtimeOnly 'mysql:mysql-connector-java'
+    implementation 'mysql:mysql-connector-java'
     testImplementation 'org.springframework.boot:spring-boot-starter-test'
     testImplementation 'org.springframework.security:spring-security-test'
+    compile 'net.sf.ehcache:ehcache:2.10.6'
+    compile group: 'com.alibaba', name: 'fastjson', version: '1.2.47'
+    compile 'com.alibaba:druid-spring-boot-starter:1.1.16'
 }
 
 dependencyManagement {

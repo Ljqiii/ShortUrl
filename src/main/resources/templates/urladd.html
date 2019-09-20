@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="https://www.thymeleaf.org">
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>添加url</title>
+</head>
+<body>
+
+<form th:action="@{/add}" method="post">
+    网址
+    <input type="text" name="originurl">
+    <br>
+    过期时间
+    <select name="expiretime" id="expiretime">
+        <option value="1">1天</option>
+        <option value="7">7天</option>
+        <option value="30">30天</option>
+        <option value="0">永不过期</option>
+    </select>
+    <br>
+    <input type="submit">
+</form>
+
+</body>
+</html>

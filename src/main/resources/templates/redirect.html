@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="https://www.thymeleaf.org">
+
+<html lang="en">
+<head>
+    <meta http-equiv="refresh" th:content="'3;url='+${originurl}">
+
+    <title>跳转中</title>
+</head>
+<body>
+
+3秒后跳转
+<p th:text="${originurl}">链接</p>
+<a th:href="${originurl}">点击跳转</a>
+
+
+</body>
+</html>
