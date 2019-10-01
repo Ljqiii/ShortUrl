@@ -50,8 +50,9 @@ CREATE TABLE `shorturl` (
   `id` char(10) NOT NULL,
   `originurl` varchar(500) DEFAULT NULL,
   `expiretime` datetime DEFAULT NULL,
+  `visits` int(11) NOT NULL DEFAULT '0',
   UNIQUE KEY `id` (`id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 ;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -60,7 +61,7 @@ CREATE TABLE `shorturl` (
 
 LOCK TABLES `shorturl` WRITE;
 /*!40000 ALTER TABLE `shorturl` DISABLE KEYS */;
-INSERT INTO `shorturl` VALUES ('10002','http://google.com','2019-09-21 06:01:01');
+INSERT INTO `shorturl` VALUES ('10008','http://baidu.com','2019-10-02 10:34:14',3),('10009','http://google.com','2019-10-02 10:37:37',3);
 /*!40000 ALTER TABLE `shorturl` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -74,7 +75,7 @@ DROP TABLE IF EXISTS `status`;
 CREATE TABLE `status` (
   `k` varchar(10) DEFAULT NULL,
   `v` varchar(10) DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 ;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -83,7 +84,7 @@ CREATE TABLE `status` (
 
 LOCK TABLES `status` WRITE;
 /*!40000 ALTER TABLE `status` DISABLE KEYS */;
-INSERT INTO `status` VALUES ('lastid','10007');
+INSERT INTO `status` VALUES ('lastid','10009');
 /*!40000 ALTER TABLE `status` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -149,4 +150,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2019-09-20  1:25:43
+-- Dump completed on 2019-10-01  3:40:14
